@@ -25,52 +25,52 @@ const faqs = [
   {
     question: "Is it a no-code builder?",
     answer:
-      "No — it's 100% coded (Next.js, Node.js, Flutter). You get enterprise-grade speed with the simplicity of self-management. This means better performance, security, and customization compared to no-code solutions.",
+      "No — it's 100% coded (Next.js, Node.js, Flutter). You get enterprise-grade speed with the simplicity of self-management.",
   },
   {
     question: "What happens after launch?",
     answer:
-      "We provide ongoing support, maintenance, and optional upgrades as you scale. Our team monitors your system's performance and security, so you can focus on growing your business.",
+      "We provide ongoing support, maintenance, and optional upgrades as you scale. Our team monitors your system's performance and security.",
   },
 ];
 
 const FAQSection = () => {
   return (
-    <section className="relative overflow-hidden bg-background py-24">
-      <div className="container mx-auto px-4">
+    <section className="bg-muted/50 py-32">
+      <div className="container mx-auto px-6 lg:px-12">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-16 text-center"
+          transition={{ duration: 0.5 }}
+          className="max-w-3xl mx-auto mb-16"
         >
-          <h2 className="mb-4 font-display text-3xl font-bold text-foreground md:text-4xl lg:text-5xl">
+          <span className="inline-block mb-8 text-sm font-medium text-muted-foreground tracking-wide uppercase">
+            FAQ
+          </span>
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
             Frequently Asked Questions
           </h2>
-          <p className="text-lg text-muted-foreground">
-            Everything you need to know about Outlfy E-Commerce OS
-          </p>
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="mx-auto max-w-3xl"
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="max-w-3xl mx-auto"
         >
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="rounded-xl border border-border bg-card px-6 shadow-soft"
+                className="bg-background border border-border rounded-lg px-6"
               >
-                <AccordionTrigger className="py-6 text-left font-display text-lg font-semibold text-foreground hover:no-underline">
+                <AccordionTrigger className="py-6 text-left font-display text-lg font-medium text-foreground hover:no-underline">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="pb-6 text-muted-foreground">
+                <AccordionContent className="pb-6 text-muted-foreground leading-relaxed">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
