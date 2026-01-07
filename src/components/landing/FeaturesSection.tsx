@@ -6,16 +6,13 @@ import {
   Truck,
   BarChart3,
   Link2,
-  Image,
-  Settings,
 } from "lucide-react";
 
 const features = [
   {
     icon: Store,
     title: "Store & Product Management",
-    description:
-      "Manage your entire product catalog and store operations effortlessly — no developer required.",
+    description: "Manage your entire product catalog effortlessly.",
     items: [
       "Add, edit, and customize products instantly",
       "Manage variants, attributes, and categories",
@@ -25,48 +22,46 @@ const features = [
   },
   {
     icon: Megaphone,
-    title: "Marketing & Growth Automation",
-    description:
-      "Run promotions and campaigns that actually drive conversions.",
+    title: "Marketing & Growth",
+    description: "Run promotions that drive conversions.",
     items: [
-      "Create and schedule product campaigns",
-      "Display dynamic banners and promotions",
-      "Launch limited-time offers in minutes",
-      "Reward customers with wallets and points",
+      "Create and schedule campaigns",
+      "Dynamic banners and promotions",
+      "Limited-time offers in minutes",
+      "Customer wallets and points",
     ],
   },
   {
     icon: Heart,
-    title: "Customer Experience & Engagement",
-    description:
-      "Deliver a smooth, personalized experience for every shopper.",
+    title: "Customer Experience",
+    description: "Deliver smooth, personalized experiences.",
     items: [
-      "Dedicated customer portal with tracking",
-      "Login & order OTP verification",
-      "Wishlist, search, and product filters",
-      "Multi-language & multi-currency support",
+      "Customer portal with tracking",
+      "OTP verification for security",
+      "Wishlist and advanced filters",
+      "Multi-language & currency",
     ],
   },
   {
     icon: Truck,
     title: "Shipping & Logistics",
-    description: "Take complete control of your delivery and logistics.",
+    description: "Complete control of delivery operations.",
     items: [
-      "Advanced zone-based shipping options",
-      "Country, state, and city configuration",
+      "Zone-based shipping options",
+      "Location-based configuration",
       "Logistic partner integration",
-      "Area-wise delivery and cost control",
+      "Area-wise cost control",
     ],
   },
   {
     icon: BarChart3,
-    title: "Dashboard, Insights & Team Control",
-    description: "Get a complete bird's-eye view of your business performance.",
+    title: "Dashboard & Insights",
+    description: "Bird's-eye view of your business.",
     items: [
-      "Powerful admin dashboard (Light & Dark)",
-      "Real-time summary and advanced reports",
-      "Role-based staff management",
-      "Custom analytics and insights",
+      "Powerful admin dashboard",
+      "Real-time reports",
+      "Role-based staff access",
+      "Custom analytics",
     ],
   },
   {
@@ -74,68 +69,64 @@ const features = [
     title: "Integrations & Support",
     description: "Connect everything that powers your business.",
     items: [
-      "Seamless ERP & CRM integrations",
-      "Tax, payment, inventory connectivity",
-      "Dedicated customer support team",
-      "Continuous updates and security",
+      "ERP & CRM integrations",
+      "Tax & payment connectivity",
+      "Dedicated support team",
+      "Continuous updates",
     ],
   },
 ];
 
 const FeaturesSection = () => {
   return (
-    <section className="relative overflow-hidden bg-muted/30 py-24">
-      {/* Background decorations */}
-      <div className="absolute inset-0">
-        <div className="absolute left-0 top-1/4 h-96 w-96 rounded-full bg-primary/5 blur-3xl" />
-        <div className="absolute bottom-1/4 right-0 h-64 w-64 rounded-full bg-accent/5 blur-3xl" />
-      </div>
-
-      <div className="container relative z-10 mx-auto px-4">
+    <section className="bg-muted/50 py-32">
+      <div className="container mx-auto px-6 lg:px-12">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-16 text-center"
+          transition={{ duration: 0.5 }}
+          className="max-w-3xl mx-auto mb-20"
         >
-          <h2 className="mb-4 font-display text-3xl font-bold text-foreground md:text-4xl lg:text-5xl">
-            Powerful Features for{" "}
-            <span className="text-gradient">Full Control</span>
+          <span className="inline-block mb-8 text-sm font-medium text-muted-foreground tracking-wide uppercase">
+            Features
+          </span>
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-6">
+            Everything you need to run your store
           </h2>
-          <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-            Outlfy E-Commerce OS combines everything you need to build, run, and
-            scale your online business — across website, app, and admin
-            dashboard — all in one place.
+          <p className="text-lg text-muted-foreground">
+            Outlfy combines website, app, and dashboard — all in one place.
           </p>
         </motion.div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group rounded-2xl border border-border bg-card p-6 shadow-soft transition-all duration-300 hover:border-primary/30 hover:shadow-strong"
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+              className="group bg-background border border-border rounded-lg p-8 hover:border-foreground/20 transition-colors"
             >
-              <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3 transition-colors group-hover:bg-primary/20">
-                <feature.icon className="h-6 w-6 text-primary" />
+              <div className="w-12 h-12 rounded-lg bg-foreground flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <feature.icon className="h-5 w-5 text-background" />
               </div>
-              <h3 className="mb-2 font-display text-xl font-bold text-foreground">
+              
+              <h3 className="font-display text-xl font-semibold text-foreground mb-2">
                 {feature.title}
               </h3>
-              <p className="mb-4 text-sm text-muted-foreground">
+              <p className="text-muted-foreground text-sm mb-6">
                 {feature.description}
               </p>
-              <ul className="space-y-2">
+              
+              <ul className="space-y-3">
                 {feature.items.map((item) => (
                   <li
                     key={item}
-                    className="flex items-start gap-2 text-sm text-muted-foreground"
+                    className="flex items-start gap-3 text-sm text-muted-foreground"
                   >
-                    <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
+                    <span className="w-1 h-1 rounded-full bg-foreground mt-2 flex-shrink-0" />
                     {item}
                   </li>
                 ))}
@@ -145,24 +136,17 @@ const FeaturesSection = () => {
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-16 rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/5 to-accent/5 p-8 text-center"
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="mt-20 bg-foreground rounded-lg p-12 text-center"
         >
-          <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3">
-            <Settings className="h-6 w-6 text-primary" />
-          </div>
-          <h3 className="mb-2 font-display text-2xl font-bold text-foreground">
-            In Short — Your Complete E-Commerce Operating System
+          <h3 className="font-display text-2xl md:text-3xl font-bold text-background mb-4">
+            Your Complete E-Commerce Operating System
           </h3>
-          <p className="text-muted-foreground">
-            A single system that powers your website, mobile app, dashboard, and
-            marketing — custom-built, fully coded, and{" "}
-            <span className="font-semibold text-primary">
-              100% under your control.
-            </span>
+          <p className="text-background/70 max-w-2xl mx-auto">
+            A single system that powers your website, mobile app, dashboard, and marketing — custom-built, fully coded, and 100% under your control.
           </p>
         </motion.div>
       </div>

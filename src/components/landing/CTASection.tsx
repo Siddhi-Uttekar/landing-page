@@ -1,82 +1,72 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Calendar, Play, Rocket } from "lucide-react";
+import { ArrowRight, Play } from "lucide-react";
+import { config } from "@/lib/config";
 
 const CTASection = () => {
-  return (
-    <section className="relative overflow-hidden gradient-hero py-24">
-      {/* Background decorations */}
-      <div className="absolute inset-0">
-        <div className="absolute -right-20 -top-20 h-80 w-80 rounded-full bg-orange-500/20 blur-3xl" />
-        <div className="absolute -bottom-20 -left-20 h-64 w-64 rounded-full bg-white/10 blur-3xl" />
-      </div>
+  const handleBookCall = () => {
+    window.open(config.bookCallUrl, "_blank");
+  };
 
-      <div className="container relative z-10 mx-auto px-4">
-        <div className="mx-auto max-w-4xl text-center">
+  const handleGetDemo = () => {
+    window.open(config.storeDemoUrl, "_blank");
+  };
+
+  return (
+    <section className="bg-foreground py-32">
+      <div className="container mx-auto px-6 lg:px-12">
+        <div className="max-w-3xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.5 }}
           >
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2">
-              <Rocket className="h-4 w-4 text-orange-400" />
-              <span className="text-sm font-medium text-white">
-                Ready to Scale?
-              </span>
-            </div>
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-background leading-tight mb-6">
+              Ready to take full control of your store?
+            </h2>
+            <p className="text-background/70 text-lg mb-12">
+              Let's build your system once — and give you lifetime freedom to manage it your way.
+            </p>
           </motion.div>
 
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="mb-6 font-display text-3xl font-bold text-white md:text-4xl lg:text-5xl"
-          >
-            Ready to take full control of your store?
-          </motion.h2>
-
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="mb-8 text-lg text-white/80 md:text-xl"
-          >
-            Let's build your system once — and give you lifetime freedom to
-            manage it your way.
-          </motion.p>
-
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="mb-12 rounded-2xl bg-white/10 p-6 backdrop-blur-sm md:p-8"
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="bg-background/10 border border-background/20 rounded-lg p-8 mb-12"
           >
-            <p className="font-display text-lg font-semibold text-white md:text-xl">
+            <p className="text-background font-medium mb-2">
               🚀 Book your free 45-minute strategy session today.
             </p>
-            <p className="mt-2 text-white/80">
-              Let's plan your growth system, show you the live demo, and map
-              your automation journey.
+            <p className="text-background/70 text-sm">
+              Let's plan your growth system, show you the live demo, and map your automation journey.
             </p>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-col items-center justify-center gap-4 sm:flex-row"
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <Button variant="hero" size="xl">
-              <Calendar className="mr-2 h-5 w-5" />
+            <Button 
+              size="xl" 
+              className="bg-background text-foreground hover:bg-background/90"
+              onClick={handleBookCall}
+            >
               Book Free Strategy Session
+              <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
-            <Button variant="heroOutline" size="xl">
-              <Play className="mr-2 h-5 w-5" />
+            <Button 
+              variant="outline" 
+              size="xl" 
+              className="border-background/30 text-background hover:bg-background/10"
+              onClick={handleGetDemo}
+            >
+              <Play className="mr-2 h-4 w-4" />
               Get Store Demo
             </Button>
           </motion.div>
