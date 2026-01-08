@@ -13,7 +13,7 @@ const TestimonialSection = () => {
             transition={{ duration: 0.5 }}
             className="text-center mb-16"
           >
-            <span className="inline-flex items-center gap-2 px-4 py-2 bg-foreground text-background text-sm font-bold tracking-wide uppercase rounded-full">
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-accent-emerald text-white text-sm font-bold tracking-wide uppercase rounded-full">
               <TrendingUp className="w-4 h-4" />
               Results
             </span>
@@ -26,17 +26,17 @@ const TestimonialSection = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="relative bg-muted border-2 border-foreground/10 rounded-3xl p-12 md:p-16 shadow-xl"
           >
-            <Quote className="absolute top-8 left-8 w-12 h-12 text-foreground/10" />
+            <Quote className="absolute top-8 left-8 w-12 h-12 text-accent-violet/30" />
             <p className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground leading-relaxed text-center relative z-10">
               "After implementing Outlfy E-Commerce OS, a leading D2C fashion brand reduced tech dependency by{" "}
-              <span className="relative inline-block">
+              <span className="relative inline-block text-accent-emerald">
                 92%
-                <span className="absolute -bottom-1 left-0 w-full h-2 bg-foreground/20" />
+                <span className="absolute -bottom-1 left-0 w-full h-2 bg-accent-emerald/30" />
               </span>{" "}
               and launched{" "}
-              <span className="relative inline-block">
+              <span className="relative inline-block text-accent-violet">
                 5 new campaigns
-                <span className="absolute -bottom-1 left-0 w-full h-2 bg-foreground/20" />
+                <span className="absolute -bottom-1 left-0 w-full h-2 bg-accent-violet/30" />
               </span>{" "}
               — all managed in-house."
             </p>

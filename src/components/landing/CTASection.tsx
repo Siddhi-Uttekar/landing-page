@@ -26,7 +26,7 @@ const CTASection = () => {
               Ready to take full control of your store?
             </h2>
             <p className="text-background/80 text-xl mb-16 max-w-2xl mx-auto">
-              Let's build your system once — and give you lifetime freedom to manage it your way.
+              Let's build your system once — and give you <span className="text-accent-amber font-bold">lifetime freedom</span> to manage it your way.
             </p>
           </motion.div>
 
@@ -38,7 +38,7 @@ const CTASection = () => {
             className="bg-background/10 backdrop-blur border border-background/20 rounded-2xl p-10 mb-12"
           >
             <div className="flex items-center justify-center gap-3 mb-4">
-              <Rocket className="w-6 h-6 text-background" />
+              <Rocket className="w-6 h-6 text-accent-amber" />
               <p className="text-background font-bold text-xl">
                 Book your free 45-minute strategy session today.
               </p>
@@ -57,7 +57,7 @@ const CTASection = () => {
           >
             <Button 
               size="xl" 
-              className="bg-background text-foreground hover:bg-background/90 shadow-bold"
+              className="bg-accent-emerald hover:bg-accent-emerald/90 text-white shadow-bold"
               onClick={handleBookCall}
             >
               Book Free Strategy Session

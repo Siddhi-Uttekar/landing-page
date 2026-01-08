@@ -23,7 +23,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <span className="inline-block mb-8 text-sm font-medium text-muted-foreground tracking-wide uppercase">
+              <span className="inline-block mb-8 text-sm font-medium text-accent-violet tracking-wide uppercase">
                 E-Commerce Operating System
               </span>
             </motion.div>
@@ -38,7 +38,7 @@ const Hero = () => {
               <br />
               <span className="relative inline-block">
                 Manage Everything.
-                <span className="absolute -bottom-2 left-0 w-full h-3 bg-foreground/10 -z-10" />
+                <span className="absolute -bottom-2 left-0 w-full h-3 bg-accent-amber/30 -z-10" />
               </span>
             </motion.h1>
 
@@ -48,7 +48,7 @@ const Hero = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-lg text-muted-foreground leading-relaxed mb-12 max-w-md"
             >
-              Get a fully coded website, mobile app, and dashboard. Change banners, prices, and content instantly — zero developer cost.
+              Get a fully coded website, mobile app, and dashboard. Change banners, prices, and content instantly — <span className="text-accent-emerald font-medium">zero developer cost.</span>
             </motion.p>
 
             <motion.div

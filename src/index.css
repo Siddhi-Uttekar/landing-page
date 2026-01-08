@@ -33,6 +33,13 @@
     --warning: 38 92% 50%;
     --warning-foreground: 0 0% 100%;
 
+    /* Accent colors for highlights */
+    --accent-rose: 346 77% 50%;
+    --accent-amber: 38 92% 50%;
+    --accent-emerald: 160 84% 39%;
+    --accent-violet: 263 70% 50%;
+    --accent-cyan: 192 91% 36%;
+
     --border: 0 0% 90%;
     --input: 0 0% 90%;
     --ring: 0 0% 9%;

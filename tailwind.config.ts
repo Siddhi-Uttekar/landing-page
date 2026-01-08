@@ -19,6 +19,12 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        // Accent colors
+        'accent-rose': 'hsl(var(--accent-rose))',
+        'accent-amber': 'hsl(var(--accent-amber))',
+        'accent-emerald': 'hsl(var(--accent-emerald))',
+        'accent-violet': 'hsl(var(--accent-violet))',
+        'accent-cyan': 'hsl(var(--accent-cyan))',
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",

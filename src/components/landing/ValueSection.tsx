@@ -12,7 +12,7 @@ const ValueSection = () => {
           transition={{ duration: 0.5 }}
           className="max-w-3xl mx-auto text-center mb-16"
         >
-          <span className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-foreground text-background text-sm font-bold tracking-wide uppercase rounded-full">
+          <span className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-accent-amber text-white text-sm font-bold tracking-wide uppercase rounded-full">
             <Sparkles className="w-4 h-4" />
             Imagine This
           </span>
@@ -26,15 +26,15 @@ const ValueSection = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="bg-background border-2 border-foreground/10 rounded-2xl p-10 shadow-xl hover:shadow-bold transition-shadow"
           >
-            <div className="w-14 h-14 rounded-xl bg-foreground flex items-center justify-center mb-6">
-              <Clock className="w-7 h-7 text-background" />
+            <div className="w-14 h-14 rounded-xl bg-accent-amber flex items-center justify-center mb-6">
+              <Clock className="w-7 h-7 text-white" />
             </div>
             <h3 className="font-display text-2xl font-bold text-foreground mb-4">
               Festive Banner Tonight
             </h3>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Your marketing team wants to push a festive banner tonight — and it's{" "}
-              <span className="text-foreground font-bold">live in 5 minutes.</span>
+              <span className="text-accent-emerald font-bold">live in 5 minutes.</span>
             </p>
           </motion.div>
 
@@ -45,15 +45,15 @@ const ValueSection = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="bg-background border-2 border-foreground/10 rounded-2xl p-10 shadow-xl hover:shadow-bold transition-shadow"
           >
-            <div className="w-14 h-14 rounded-xl bg-foreground flex items-center justify-center mb-6">
-              <Rocket className="w-7 h-7 text-background" />
+            <div className="w-14 h-14 rounded-xl bg-accent-violet flex items-center justify-center mb-6">
+              <Rocket className="w-7 h-7 text-white" />
             </div>
             <h3 className="font-display text-2xl font-bold text-foreground mb-4">
               New Product Variant
             </h3>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Your operations team adds a new product variant —{" "}
-              <span className="text-foreground font-bold">without waiting for developers.</span>
+              <span className="text-accent-violet font-bold">without waiting for developers.</span>
             </p>
           </motion.div>
         </div>
@@ -69,7 +69,7 @@ const ValueSection = () => {
             Your brand moves at{" "}
             <span className="relative inline-block">
               your speed.
-              <span className="absolute -bottom-1 left-0 w-full h-3 bg-foreground/10 -z-10" />
+              <span className="absolute -bottom-1 left-0 w-full h-3 bg-accent-emerald/30 -z-10" />
             </span>
           </h3>
         </motion.div>

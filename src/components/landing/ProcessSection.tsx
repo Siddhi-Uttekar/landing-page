@@ -6,30 +6,40 @@ const steps = [
     title: "Discovery & Strategy Call",
     description:
       "We start with a deep-dive session to understand your business model, operations, and goals.",
+    color: "text-accent-violet",
+    hoverBg: "bg-accent-violet",
   },
   {
     number: "02",
     title: "Design & Development",
     description:
       "Our team designs and codes your website, mobile app, and dashboard — aligned with your brand.",
+    color: "text-accent-rose",
+    hoverBg: "bg-accent-rose",
   },
   {
     number: "03",
     title: "System Integration",
     description:
       "We connect your ERP, CRM, payment gateways, and logistics systems seamlessly.",
+    color: "text-accent-amber",
+    hoverBg: "bg-accent-amber",
   },
   {
     number: "04",
     title: "Delivery & Training",
     description:
       "We hand over your complete system and train your team — no tech background required.",
+    color: "text-accent-emerald",
+    hoverBg: "bg-accent-emerald",
   },
   {
     number: "05",
     title: "Maintenance & Growth",
     description:
       "We stay with you post-launch to monitor, optimize, and keep your system ready for growth.",
+    color: "text-accent-cyan",
+    hoverBg: "bg-accent-cyan",
   },
 ];
 
@@ -44,7 +54,7 @@ const ProcessSection = () => {
           transition={{ duration: 0.5 }}
           className="max-w-3xl mx-auto mb-20"
         >
-          <span className="inline-block mb-6 px-4 py-2 bg-foreground/5 border border-foreground/10 text-foreground text-sm font-medium tracking-wide uppercase rounded-full">
+          <span className="inline-block mb-6 px-4 py-2 bg-accent-cyan/10 border border-accent-cyan/30 text-accent-cyan text-sm font-medium tracking-wide uppercase rounded-full">
             The Process
           </span>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
@@ -65,7 +75,7 @@ const ProcessSection = () => {
               >
                 {/* Bold number */}
                 <div className="col-span-2 lg:col-span-1">
-                  <span className="font-display text-3xl font-bold text-foreground/20 group-hover:text-foreground transition-colors">
+                  <span className={`font-display text-3xl font-bold ${step.color} group-hover:scale-110 transition-transform inline-block`}>
                     {step.number}
                   </span>
                 </div>
@@ -80,7 +90,7 @@ const ProcessSection = () => {
                   </p>
                 </div>
                 {/* Hover indicator */}
-                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-0 bg-foreground group-hover:h-12 transition-all rounded-full" />
+                <div className={`absolute left-0 top-1/2 -translate-y-1/2 w-1 h-0 ${step.hoverBg} group-hover:h-12 transition-all rounded-full`} />
               </motion.div>
             ))}
           </div>
