@@ -6,6 +6,7 @@ import {
   Truck,
   BarChart3,
   Link2,
+  Check,
 } from "lucide-react";
 
 const features = [
@@ -79,44 +80,45 @@ const features = [
 
 const FeaturesSection = () => {
   return (
-    <section className="bg-muted/50 py-32">
+    <section className="bg-muted py-32" id="features">
       <div className="container mx-auto px-6 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="max-w-3xl mx-auto mb-20"
+          className="max-w-3xl mx-auto text-center mb-20"
         >
-          <span className="inline-block mb-8 text-sm font-medium text-muted-foreground tracking-wide uppercase">
-            Features
+          <span className="inline-block mb-6 px-4 py-2 bg-foreground text-background text-sm font-bold tracking-wide uppercase rounded-full">
+            Powerful Features
           </span>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-6">
             Everything you need to run your store
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-xl text-muted-foreground">
             Outlfy combines website, app, and dashboard — all in one place.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="group bg-background border border-border rounded-lg p-8 hover:border-foreground/20 transition-colors"
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="group relative bg-background rounded-2xl p-8 shadow-xl hover:shadow-bold transition-all duration-300 hover:-translate-y-1 border-2 border-transparent hover:border-foreground/10"
             >
-              <div className="w-12 h-12 rounded-lg bg-foreground flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <feature.icon className="h-5 w-5 text-background" />
+              {/* Bold icon container */}
+              <div className="w-16 h-16 rounded-2xl bg-foreground flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <feature.icon className="h-7 w-7 text-background" />
               </div>
               
-              <h3 className="font-display text-xl font-semibold text-foreground mb-2">
+              <h3 className="font-display text-xl font-bold text-foreground mb-3">
                 {feature.title}
               </h3>
-              <p className="text-muted-foreground text-sm mb-6">
+              <p className="text-muted-foreground mb-6">
                 {feature.description}
               </p>
               
@@ -124,13 +126,18 @@ const FeaturesSection = () => {
                 {feature.items.map((item) => (
                   <li
                     key={item}
-                    className="flex items-start gap-3 text-sm text-muted-foreground"
+                    className="flex items-start gap-3 text-sm"
                   >
-                    <span className="w-1 h-1 rounded-full bg-foreground mt-2 flex-shrink-0" />
-                    {item}
+                    <span className="w-5 h-5 rounded-full bg-foreground/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Check className="w-3 h-3 text-foreground" />
+                    </span>
+                    <span className="text-muted-foreground group-hover:text-foreground transition-colors">{item}</span>
                   </li>
                 ))}
               </ul>
+
+              {/* Subtle corner accent */}
+              <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-foreground/5 to-transparent rounded-tr-2xl rounded-bl-[60px] pointer-events-none" />
             </motion.div>
           ))}
         </div>
@@ -140,12 +147,12 @@ const FeaturesSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="mt-20 bg-foreground rounded-lg p-12 text-center"
+          className="mt-24 bg-foreground rounded-3xl p-12 md:p-16 text-center shadow-bold"
         >
-          <h3 className="font-display text-2xl md:text-3xl font-bold text-background mb-4">
+          <h3 className="font-display text-2xl md:text-4xl font-bold text-background mb-6">
             Your Complete E-Commerce Operating System
           </h3>
-          <p className="text-background/70 max-w-2xl mx-auto">
+          <p className="text-background/80 text-lg max-w-3xl mx-auto leading-relaxed">
             A single system that powers your website, mobile app, dashboard, and marketing — custom-built, fully coded, and 100% under your control.
           </p>
         </motion.div>

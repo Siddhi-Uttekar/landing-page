@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
+import { Clock, Sparkles, Rocket } from "lucide-react";
 
 const ValueSection = () => {
   return (
-    <section className="bg-muted/50 py-32">
+    <section className="bg-muted py-32">
       <div className="container mx-auto px-6 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -11,25 +12,29 @@ const ValueSection = () => {
           transition={{ duration: 0.5 }}
           className="max-w-3xl mx-auto text-center mb-16"
         >
-          <span className="inline-block mb-8 text-sm font-medium text-muted-foreground tracking-wide uppercase">
+          <span className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-foreground text-background text-sm font-bold tracking-wide uppercase rounded-full">
+            <Sparkles className="w-4 h-4" />
             Imagine This
           </span>
         </motion.div>
 
-        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="bg-background border border-border rounded-lg p-8"
+            className="bg-background border-2 border-foreground/10 rounded-2xl p-10 shadow-xl hover:shadow-bold transition-shadow"
           >
-            <h3 className="font-display text-xl font-semibold text-foreground mb-4">
+            <div className="w-14 h-14 rounded-xl bg-foreground flex items-center justify-center mb-6">
+              <Clock className="w-7 h-7 text-background" />
+            </div>
+            <h3 className="font-display text-2xl font-bold text-foreground mb-4">
               Festive Banner Tonight
             </h3>
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-lg text-muted-foreground leading-relaxed">
               Your marketing team wants to push a festive banner tonight — and it's{" "}
-              <span className="text-foreground font-medium">live in 5 minutes.</span>
+              <span className="text-foreground font-bold">live in 5 minutes.</span>
             </p>
           </motion.div>
 
@@ -38,14 +43,17 @@ const ValueSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="bg-background border border-border rounded-lg p-8"
+            className="bg-background border-2 border-foreground/10 rounded-2xl p-10 shadow-xl hover:shadow-bold transition-shadow"
           >
-            <h3 className="font-display text-xl font-semibold text-foreground mb-4">
+            <div className="w-14 h-14 rounded-xl bg-foreground flex items-center justify-center mb-6">
+              <Rocket className="w-7 h-7 text-background" />
+            </div>
+            <h3 className="font-display text-2xl font-bold text-foreground mb-4">
               New Product Variant
             </h3>
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-lg text-muted-foreground leading-relaxed">
               Your operations team adds a new product variant —{" "}
-              <span className="text-foreground font-medium">without waiting for developers.</span>
+              <span className="text-foreground font-bold">without waiting for developers.</span>
             </p>
           </motion.div>
         </div>
@@ -55,10 +63,14 @@ const ValueSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="mt-16 text-center"
+          className="mt-20 text-center"
         >
-          <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground">
-            Your brand moves at your speed.
+          <h3 className="font-display text-3xl md:text-4xl font-bold text-foreground">
+            Your brand moves at{" "}
+            <span className="relative inline-block">
+              your speed.
+              <span className="absolute -bottom-1 left-0 w-full h-3 bg-foreground/10 -z-10" />
+            </span>
           </h3>
         </motion.div>
       </div>
