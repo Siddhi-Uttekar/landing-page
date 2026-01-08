@@ -12,7 +12,7 @@ const ShiftSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <span className="inline-flex items-center gap-2 mb-8 px-4 py-2 bg-foreground/5 border border-foreground/10 text-foreground text-sm font-medium tracking-wide uppercase rounded-full">
+            <span className="inline-flex items-center gap-2 mb-8 px-4 py-2 bg-accent-emerald/10 border border-accent-emerald/30 text-accent-emerald text-sm font-medium tracking-wide uppercase rounded-full">
               <Zap className="w-4 h-4" />
               The Shift
             </span>
@@ -28,7 +28,7 @@ const ShiftSection = () => {
             The future of e-commerce isn't just online stores — it's{" "}
             <span className="relative inline-block">
               self-managed growth systems.
-              <span className="absolute -bottom-1 left-0 w-full h-2 bg-foreground/10 -z-10" />
+              <span className="absolute -bottom-1 left-0 w-full h-2 bg-accent-emerald/30 -z-10" />
             </span>
           </motion.h2>
 
@@ -39,7 +39,7 @@ const ShiftSection = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-xl text-muted-foreground leading-relaxed mb-16 max-w-2xl mx-auto"
           >
-            When your marketing, product, and operations teams can instantly make changes, launch offers, or update data — you scale faster.
+            When your marketing, product, and operations teams can instantly make changes, launch offers, or update data — <span className="text-accent-emerald font-medium">you scale faster.</span>
           </motion.p>
 
           <motion.div
@@ -53,7 +53,7 @@ const ShiftSection = () => {
               That's exactly why we built
             </p>
             <h3 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Outlfy E-Commerce OS
+              Outlfy <span className="text-accent-violet">E-Commerce OS</span>
             </h3>
             <p className="text-lg text-muted-foreground mb-8 max-w-lg mx-auto">
               A fully coded, enterprise-grade system that gives you{" "}

@@ -25,12 +25,12 @@ const PricingSection = () => {
           transition={{ duration: 0.5 }}
           className="max-w-3xl mx-auto mb-20"
         >
-          <span className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-foreground/5 border border-foreground/10 text-foreground text-sm font-medium tracking-wide uppercase rounded-full">
+          <span className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-accent-amber/10 border border-accent-amber/30 text-accent-amber text-sm font-medium tracking-wide uppercase rounded-full">
             <Coins className="w-4 h-4" />
             Pricing
           </span>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-6">
-            Custom-Built Pricing
+            Custom-Built <span className="text-accent-amber">Pricing</span>
           </h2>
           <p className="text-xl text-muted-foreground">
             Because every brand is different.
@@ -49,7 +49,7 @@ const PricingSection = () => {
               No two businesses are the same — and neither should be their systems. Our pricing adapts to your brand's scale, SKU volume, and operational complexity.
             </p>
             <p className="text-xl text-foreground font-bold mb-12">
-              We build everything from code — so you get a one-time investment that gives you lifetime control.
+              We build everything from code — so you get a <span className="text-accent-emerald">one-time investment</span> that gives you <span className="text-accent-violet">lifetime control</span>.
             </p>
 
             <div className="space-y-5">
@@ -65,8 +65,8 @@ const PricingSection = () => {
                   transition={{ duration: 0.4, delay: 0.2 + index * 0.1 }}
                   className="flex items-center gap-4"
                 >
-                  <div className="w-8 h-8 rounded-lg bg-foreground flex items-center justify-center flex-shrink-0 shadow-lg">
-                    <Check className="h-4 w-4 text-background" />
+                  <div className="w-8 h-8 rounded-lg bg-accent-violet flex items-center justify-center flex-shrink-0 shadow-lg">
+                    <Check className="h-4 w-4 text-white" />
                   </div>
                   <span className="text-lg text-muted-foreground">{factor}</span>
                 </motion.div>
