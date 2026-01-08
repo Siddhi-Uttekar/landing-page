@@ -70,13 +70,19 @@ const Hero = () => {
 
           {/* Right Side - Empty Space for Figma UI */}
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+
             className="hidden lg:flex items-center justify-center min-h-[500px] border border-dashed border-border rounded-lg"
           >
-            {/* TODO: Insert your Figma UI here */}
-            <p className="text-muted-foreground text-sm">Figma UI Placeholder</p>
+            <video
+  src="public/video/Bento-Grid.mp4"
+ autoPlay
+  muted
+  loop
+  playsInline
+  className="w-full rounded-xl shadow-lg"
+>
+  Your browser does not support the video tag.
+</video>
           </motion.div>
         </div>
       </div>

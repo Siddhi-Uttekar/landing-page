@@ -58,7 +58,7 @@ const PainSection = () => {
             <p className="text-2xl font-bold text-foreground mb-10">
               That wait <span className="text-accent-rose">costs you:</span>
             </p>
-            
+
             <div className="grid sm:grid-cols-2 gap-6">
               {painPoints.map((point, index) => (
                 <motion.div
@@ -95,9 +95,7 @@ const PainSection = () => {
             className="bg-accent-rose/5 border-2 border-accent-rose/20 rounded-2xl p-8 md:p-12"
           >
             <div className="flex items-start gap-4">
-              <div className="w-16 h-16 rounded-full bg-accent-rose flex items-center justify-center flex-shrink-0">
-                <span className="font-display font-bold text-2xl text-white">15h</span>
-              </div>
+              
               <div>
                 <p className="text-2xl md:text-3xl text-foreground font-bold mb-3">
                   Most D2C brands lose <span className="text-accent-rose">10–15 hours a week</span>

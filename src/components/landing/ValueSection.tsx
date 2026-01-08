@@ -45,7 +45,7 @@ const ValueSection = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="bg-background border-2 border-foreground/10 rounded-2xl p-10 shadow-xl hover:shadow-bold transition-shadow"
           >
-            <div className="w-14 h-14 rounded-xl bg-accent-violet flex items-center justify-center mb-6">
+            <div className="w-14 h-14 rounded-xl bg-accent-amber flex items-center justify-center mb-6">
               <Rocket className="w-7 h-7 text-white" />
             </div>
             <h3 className="font-display text-2xl font-bold text-foreground mb-4">
@@ -53,7 +53,7 @@ const ValueSection = () => {
             </h3>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Your operations team adds a new product variant —{" "}
-              <span className="text-accent-violet font-bold">without waiting for developers.</span>
+              <span className="text-accent-emerald font-bold">without waiting for developers.</span>
             </p>
           </motion.div>
         </div>
