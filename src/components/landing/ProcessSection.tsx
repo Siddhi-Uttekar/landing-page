@@ -35,7 +35,7 @@ const steps = [
 
 const ProcessSection = () => {
   return (
-    <section className="bg-background py-32">
+    <section className="bg-background py-32" id="process">
       <div className="container mx-auto px-6 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -44,7 +44,7 @@ const ProcessSection = () => {
           transition={{ duration: 0.5 }}
           className="max-w-3xl mx-auto mb-20"
         >
-          <span className="inline-block mb-8 text-sm font-medium text-muted-foreground tracking-wide uppercase">
+          <span className="inline-block mb-6 px-4 py-2 bg-foreground/5 border border-foreground/10 text-foreground text-sm font-medium tracking-wide uppercase rounded-full">
             The Process
           </span>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
@@ -53,7 +53,7 @@ const ProcessSection = () => {
         </motion.div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="space-y-1">
+          <div className="space-y-0">
             {steps.map((step, index) => (
               <motion.div
                 key={step.number}
@@ -61,23 +61,26 @@ const ProcessSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="group grid grid-cols-12 gap-6 py-8 border-b border-border hover:bg-muted/30 transition-colors px-6 -mx-6 rounded-lg"
+                className="group relative grid grid-cols-12 gap-6 py-10 border-b border-foreground/10 hover:bg-muted/50 transition-all px-8 -mx-8 rounded-xl"
               >
+                {/* Bold number */}
                 <div className="col-span-2 lg:col-span-1">
-                  <span className="font-display text-2xl font-bold text-muted-foreground/50 group-hover:text-foreground transition-colors">
+                  <span className="font-display text-3xl font-bold text-foreground/20 group-hover:text-foreground transition-colors">
                     {step.number}
                   </span>
                 </div>
                 <div className="col-span-10 lg:col-span-4">
-                  <h3 className="font-display text-lg font-semibold text-foreground">
+                  <h3 className="font-display text-xl font-bold text-foreground group-hover:translate-x-1 transition-transform">
                     {step.title}
                   </h3>
                 </div>
                 <div className="col-span-12 lg:col-span-7 lg:pl-8">
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed text-lg">
                     {step.description}
                   </p>
                 </div>
+                {/* Hover indicator */}
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-0 bg-foreground group-hover:h-12 transition-all rounded-full" />
               </motion.div>
             ))}
           </div>

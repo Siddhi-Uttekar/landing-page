@@ -1,18 +1,19 @@
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Zap } from "lucide-react";
 
 const ShiftSection = () => {
   return (
-    <section className="bg-muted/50 py-32">
+    <section className="bg-muted py-32">
       <div className="container mx-auto px-6 lg:px-12">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <span className="inline-block mb-8 text-sm font-medium text-muted-foreground tracking-wide uppercase">
+            <span className="inline-flex items-center gap-2 mb-8 px-4 py-2 bg-foreground/5 border border-foreground/10 text-foreground text-sm font-medium tracking-wide uppercase rounded-full">
+              <Zap className="w-4 h-4" />
               The Shift
             </span>
           </motion.div>
@@ -24,7 +25,11 @@ const ShiftSection = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-8 leading-tight"
           >
-            The future of e-commerce isn't just online stores — it's self-managed growth systems.
+            The future of e-commerce isn't just online stores — it's{" "}
+            <span className="relative inline-block">
+              self-managed growth systems.
+              <span className="absolute -bottom-1 left-0 w-full h-2 bg-foreground/10 -z-10" />
+            </span>
           </motion.h2>
 
           <motion.p
@@ -32,7 +37,7 @@ const ShiftSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-lg text-muted-foreground leading-relaxed mb-16"
+            className="text-xl text-muted-foreground leading-relaxed mb-16 max-w-2xl mx-auto"
           >
             When your marketing, product, and operations teams can instantly make changes, launch offers, or update data — you scale faster.
           </motion.p>
@@ -42,22 +47,22 @@ const ShiftSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="bg-background border border-border rounded-lg p-12"
+            className="bg-background border-2 border-foreground/10 rounded-2xl p-12 shadow-xl"
           >
-            <p className="text-muted-foreground mb-4">
+            <p className="text-muted-foreground mb-4 text-lg">
               That's exactly why we built
             </p>
-            <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+            <h3 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
               Outlfy E-Commerce OS
             </h3>
-            <p className="text-muted-foreground mb-8">
+            <p className="text-lg text-muted-foreground mb-8 max-w-lg mx-auto">
               A fully coded, enterprise-grade system that gives you{" "}
-              <span className="text-foreground font-medium">100% control</span>{" "}
+              <span className="text-foreground font-bold">100% control</span>{" "}
               without any tech dependency.
             </p>
             <a
               href="#features"
-              className="inline-flex items-center gap-2 text-foreground font-medium hover:gap-3 transition-all"
+              className="inline-flex items-center gap-2 bg-foreground text-background px-6 py-3 rounded-lg font-semibold hover:gap-3 transition-all hover:shadow-lg"
             >
               See how it works
               <ArrowRight className="h-4 w-4" />

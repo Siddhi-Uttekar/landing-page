@@ -32,11 +32,14 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight text-foreground mb-8"
+              className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight text-foreground mb-8"
             >
               Build. Launch.
               <br />
-              <span className="text-muted-foreground">Manage Everything.</span>
+              <span className="relative inline-block">
+                Manage Everything.
+                <span className="absolute -bottom-2 left-0 w-full h-3 bg-foreground/10 -z-10" />
+              </span>
             </motion.h1>
 
             <motion.p
